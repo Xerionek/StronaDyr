@@ -1,0 +1,158 @@
+form {
+    color: rgb(134, 69, 69);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btnWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px
+}
+
+.btnConfirm, .btnCancel {
+    font-size: 20px;
+    background-color: transparent;
+    color: rgb(134, 69, 69);
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btnConfirm {
+    width: 8dvw;
+    border-radius: 15px;
+    border: 1px solid rgb(134, 69, 69);
+    box-shadow: 0 0 15px rgb(134, 69, 69) inset;
+    transition-duration: 0.5s;
+}
+.btnConfirm:hover {
+    box-shadow: 0 0 0 rgb(134, 69, 69) inset;
+}
+
+.btnCancel {
+    position: relative;
+}
+.btnCancel::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 10px;
+    left: 0;
+    background-color: #5d1905cc;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.btnCancel:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.title {
+    background-color: transparent;
+    color: rgb(134, 69, 69);
+    border: 1px solid rgb(134, 69, 69);
+    border-radius: 25px;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+label {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+
+.addDate {
+    background-color: transparent;
+    border-radius: 15px;
+    width: 15dvw;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid rgb(134, 69, 69);
+    color: rgb(134, 69, 69);
+}
+
+.btnAddPhotos {
+    border: 1px solid rgb(134, 69, 69);
+    padding: 5px;
+    color: rgb(134, 69, 69);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 8dvw;
+    font-size: 20px;
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.wrapperFileInput {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.wrapperFileInput p {
+    margin: 0 0 0 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .btnWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    .btnConfirm, .btnCancel, .btnAddNextDay {
+        font-size: 20px;
+        background-color: transparent;
+        color: rgb(134, 69, 69);
+        border: 0;
+        cursor: pointer;
+        padding: 10px;
+    }
+    
+    .btnConfirm, .btnAddNextDay {
+        width: 70dvw;
+        border-radius: 15px;
+        border: 1px solid rgb(134, 69, 69);
+        box-shadow: 0 0 15px rgb(134, 69, 69) inset;
+        transition-duration: 0.5s;
+    }
+    
+    .btnConfirm:focus, .btnAddNextDay:focus {
+        box-shadow: 0 0 0 rgb(134, 69, 69) inset;
+    }
+
+    .addDate {
+        background-color: transparent;
+        border-radius: 15px;
+        width: 80dvw;
+        padding: 5px;
+        font-size: 15px;
+        border: 1px solid rgb(134, 69, 69);
+        color: rgb(134, 69, 69);
+    }
+
+    .lblSelectDay {
+        text-align: center;
+    }
+
+    .wrapperFileInput {
+        flex-direction: column;
+    }
+
+    .btnAddPhotos {
+        width: 80dvw;
+        margin-bottom: 20px;
+    }
+}

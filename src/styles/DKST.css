@@ -1,0 +1,40 @@
+.date {
+    flex-direction: row; 
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--gray);
+    font-size: 2dvh;
+}
+
+
+.date::before {
+    content: "";
+    border-bottom: 2px solid var(--gray);
+    width: 6dvw;
+}
+
+.date::after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid var(--gray);
+    margin: auto;
+}
+
+.DKElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DKElement h1 {
+    font-size: 3dvh;
+    text-align: center;
+}
+
+.Desc {
+    margin-top: 40px;
+    width: 40dvw;
+}

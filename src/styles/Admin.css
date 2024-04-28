@@ -1,0 +1,69 @@
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--gray);
+    font-size: 3dvh;
+    margin: 10px;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 2px solid var(--darkRed);
+    color: var(--darkRed);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form .wrapper button {
+    background-color: transparent;
+    font-size: 3dvh;
+    border: 0;
+    cursor: pointer;
+    color: var(--gray);
+    display: inline-block;
+    position: relative;
+}
+
+.form .wrapper button:last-of-type {
+    color: var(--darkRed);
+}
+ 
+.form .wrapper button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    background-color: var(--gray);
+}
+
+.form .wrapper button:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.form .wrapper button:last-of-type::after {
+    background-color: var(--darkRed);
+}
+
+.errMessage {
+    margin-top: 40px;
+    text-align: center;
+    color: red;
+    font-weight: normal;
+    font-family: "Roboto mono";
+}
