@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
+html {
+    scroll-snap-type: y proximity;
+}
+
+
+.bg {
+    width: 100%;
+    min-height: 330dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/WMLBG.png);
+    box-shadow: 0 0 15px black inset;
+    background-repeat: repeat;
+    background-size: 110% 100%;
+}
+
+.bgblur {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.WMLMain {
+    width: 80%;
+    min-height: 330dvh;
+    font-family: "Schibsted Grotesk", sans-serif;
+    color: aliceblue;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+.paragraphContainer {
+    height: 100dvh;
+    scroll-snap-align: start;
+}
+
+.WMLMain h1 {
+    text-align: center;
+    margin: 30px;
+    scroll-snap-align: start;
+}
+
+.appeartxt {
+    font-size: 110%;
+    text-align: center;
+    display: none;
+    line-height: 130%;
+}
+.fadeInClass {
+    display: block;
+    animation: fadeIn 2s;
+    margin: 50px;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+        margin-top: 0;
+    }
+    100% { 
+        opacity: 1; 
+        margin: 50px;
+    }
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+article {
+    height: 70dvw;
+    scroll-snap-align: start;
+}
+
+article h4 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.slided {
+    animation: slide 2s;
+}
+
+@keyframes slide {
+    0% { 
+        opacity: 0; 
+        margin-left: -100dvh;
+    }
+    100% { 
+        opacity: 1; 
+        margin-left: 0;
+    }
+}
+
+a {
+    text-shadow: none;
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#cards {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 87vh);
+	gap: 4vw;
+	padding-bottom: calc(3 * 1.5em);
+	margin-bottom: 4vw;
+}
+
+#card1 {
+	--index: 1;
+}
+#card2 {
+	--index: 2;
+}
+#card3 {
+	--index: 3;
+}
+
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * 1.5em);
+}
+
+.card .card-body {
+    backdrop-filter: blur(20px);
+}
+
+
+.card-body {
+	box-sizing: border-box;
+	padding: 30px;
+	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+    border-radius: 15px;
+	height: 87vh;
+	transition: all 0.5s;
+}
+
+h2 {
+	font-size: 2.5em;
+    margin-top: 28dvh;
+    margin-bottom: 15px;
+}
+
+.wrapper img {
+    float: left;
+    border-radius: 15px;
+    margin-top: -28dvh;
+    padding: 20px;
+    height: 30vh;
+}
+
+.personDesc {
+    font-size: 1.5em;
+    text-align: justify; 
+}

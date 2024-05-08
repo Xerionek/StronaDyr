@@ -5,7 +5,7 @@
         <p>Ilość dodnych zdjęć: {{ photos.length }}</p> 
       </div>
       <input type="file" accept="image/*" @change="setPhotos" id="file-input" multiple> 
-      <label for="">Tytuł:</label>
+      <label for="" class="titleLbl">Tytuł:</label>
       <input type="text" v-model="title" class="title">
   
       <label for="">Opis:</label>
@@ -111,4 +111,19 @@
     }
 </script>
 <style src="@/components/styles/AddDrogaKrzyzowa.css" scoped>
+</style>
+
+
+<style>
+  .destArea {
+    background-color: transparent;
+  }
+
+  .ql-toolbar.ql-snow, .ql-container.ql-snow{
+    border-color: var(--gray);
+  }
+
+  .destArea .ql-editor{
+    min-height: 30vh;
+  }
 </style>

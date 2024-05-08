@@ -25,7 +25,7 @@
 
 .MainRouterView {
     margin: 0 !important;
-}
+  }
 
 @media screen and (max-width: 900px) {
     .MainNav {

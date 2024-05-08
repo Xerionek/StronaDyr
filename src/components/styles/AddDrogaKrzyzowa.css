@@ -1,5 +1,5 @@
 form {
-    color: rgb(134, 69, 69);
+    color: var(--gray);
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@ form {
 .btnConfirm, .btnCancel {
     font-size: 20px;
     background-color: transparent;
-    color: rgb(134, 69, 69);
+    color: var(--gray);
     border: 0;
     cursor: pointer;
     padding: 10px;
@@ -23,17 +23,23 @@ form {
 .btnConfirm {
     width: 8dvw;
     border-radius: 15px;
-    border: 1px solid rgb(134, 69, 69);
-    box-shadow: 0 0 15px rgb(134, 69, 69) inset;
-    transition-duration: 0.5s;
+    border: 1px solid var(--gray);
+    box-shadow: 0 0 15px var(--gray) inset;
+    transition-duration: 0.3s;
 }
 .btnConfirm:hover {
-    box-shadow: 0 0 0 rgb(134, 69, 69) inset;
+    box-shadow: 0 0 0 var(--darkRed) inset;
+    color: var(--darkRed);
+    border: 1px solid var(--darkRed);
 }
 
 .btnCancel {
     position: relative;
 }
+.btnCancel:hover {
+    color: var(--darkRed);
+}
+
 .btnCancel::after {
     content: '';
     position: absolute;
@@ -42,7 +48,7 @@ form {
     height: 1px;
     bottom: 10px;
     left: 0;
-    background-color: #5d1905cc;
+    background-color: var(--darkRed);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -54,15 +60,19 @@ form {
 
 .title {
     background-color: transparent;
-    color: rgb(134, 69, 69);
-    border: 1px solid rgb(134, 69, 69);
-    border-radius: 25px;
+    color: var(--gray);
+    border: 1px solid var(--gray);
+    border-radius: 5px;
     padding: 10px;
     padding-left: 20px;
     font-size: 15px;
     font-weight: bold;
 }
-
+.title:focus {
+    border: 1px solid var(--darkRed);
+    outline: 0;
+    color: var(--darkRed);
+}
 label {
     padding-top: 20px;
     padding-bottom: 5px;
@@ -75,19 +85,30 @@ label {
     width: 15dvw;
     padding: 5px;
     font-size: 15px;
-    border: 1px solid rgb(134, 69, 69);
-    color: rgb(134, 69, 69);
+    border: 1px solid var(--gray);
+    color: var(--gray);
+}
+
+.addDate:focus {
+    outline: 0;
+    border: 1px solid var(--darkRed);
+    color: var(--darkRed);
 }
 
 .btnAddPhotos {
-    border: 1px solid rgb(134, 69, 69);
+    border: 1px solid var(--gray);
     padding: 5px;
-    color: rgb(134, 69, 69);
+    color: var(--gray);
     border-radius: 5px;
     cursor: pointer;
     width: 8dvw;
     font-size: 20px;
     text-align: center;
+}
+
+.btnAddPhotos:hover {
+    color: var(--darkRed);
+    border: 1px solid var(--darkRed);
 }
 
 input[type="file"] {
@@ -104,6 +125,10 @@ input[type="file"] {
     margin: 0 0 0 20px;
 }
 
+.titleLbl ~ .title:focus {
+    color: var(--darkRed);
+}
+
 @media screen and (max-width: 900px) {
     .btnWrapper {
         display: flex;
@@ -115,7 +140,7 @@ input[type="file"] {
     .btnConfirm, .btnCancel, .btnAddNextDay {
         font-size: 20px;
         background-color: transparent;
-        color: rgb(134, 69, 69);
+        color: var(--gray);
         border: 0;
         cursor: pointer;
         padding: 10px;
@@ -124,13 +149,13 @@ input[type="file"] {
     .btnConfirm, .btnAddNextDay {
         width: 70dvw;
         border-radius: 15px;
-        border: 1px solid rgb(134, 69, 69);
-        box-shadow: 0 0 15px rgb(134, 69, 69) inset;
+        border: 1px solid var(--gray);
+        /* box-shadow: 0 0 15px var(--gray) inset; */
         transition-duration: 0.5s;
     }
     
     .btnConfirm:focus, .btnAddNextDay:focus {
-        box-shadow: 0 0 0 rgb(134, 69, 69) inset;
+        /* box-shadow: 0 0 0 var(--gray) inset; */
     }
 
     .addDate {
@@ -139,8 +164,8 @@ input[type="file"] {
         width: 80dvw;
         padding: 5px;
         font-size: 15px;
-        border: 1px solid rgb(134, 69, 69);
-        color: rgb(134, 69, 69);
+        border: 1px solid var(--gray);
+        color: var(--gray);
     }
 
     .lblSelectDay {

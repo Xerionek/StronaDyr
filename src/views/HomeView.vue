@@ -1,12 +1,14 @@
 <template>
-  <main id="MainHome">
-     <img src="@/assets/WelcomeTxt.svg" alt="Powitanie">
-     <div class="wrapper">
-      <router-link to="/droga-krzyzowa-srodowisk-tworczych" class="btnHomeHref">{{ firstBtnTxt }}</router-link>
-      <router-link to="/zaduszki-jazzowe-srodowisk-tworczych" class="btnHomeHref">{{ secondBtnTxt }}</router-link>
-      <router-link to="/warsztaty-muzyki-liturgicznej" class="btnHomeHref">{{ thirdBtnTxt }}</router-link>
-     </div>
-  </main>
+  <div class="bg">
+    <main id="MainHome">
+      <img src="@/assets/WelcomeTxt.webp" alt="Powitanie">
+      <div class="wrapper">
+        <router-link to="/droga-krzyzowa-srodowisk-tworczych" class="btnHomeHref">{{ firstBtnTxt }}</router-link>
+        <router-link to="/zaduszki-jazzowe-srodowisk-tworczych" class="btnHomeHref">{{ secondBtnTxt }}</router-link>
+        <router-link to="/warsztaty-muzyki-liturgicznej" class="btnHomeHref">{{ thirdBtnTxt }}</router-link>
+      </div>
+    </main>
+  </div>
 </template>
 
 <script>

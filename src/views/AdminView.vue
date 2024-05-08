@@ -10,7 +10,10 @@
             <h2 class="errMessage" v-if="!isLogedIn">{{ errorMessage }}</h2>
         </div>
         <div class="adminPanel" v-if="isLogedIn">
-            <button @click="this.adminChoice = 1">Dodaj aktualność do Drogi Krzyżowej</button>
+            <div class="wrapper">
+                <button @click="this.adminChoice = 1" class="AdminChoiceBtn">Dodaj aktualność do Drogi Krzyżowej</button>
+            </div>
+            
             <AddDK v-if="this.adminChoice == 1"/>
         </div>
     </main>

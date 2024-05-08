@@ -1,5 +1,5 @@
 main {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,4 +66,37 @@ input:focus {
     color: red;
     font-weight: normal;
     font-family: "Roboto mono";
+}
+
+.AdminChoiceBtn {
+    background-color: transparent;
+    padding: 15px;
+    font-size: 2dvh;
+    border: 0;
+    cursor: pointer;
+}
+
+.AdminChoiceBtn {
+    position: relative;
+}
+.AdminChoiceBtn:hover {
+    color: var(--darkRed);
+}
+
+.AdminChoiceBtn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 10px;
+    left: 0;
+    background-color: var(--darkRed);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.AdminChoiceBtn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
