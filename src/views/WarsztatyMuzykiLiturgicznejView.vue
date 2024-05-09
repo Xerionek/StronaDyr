@@ -38,7 +38,7 @@
                         Bazylice św. Józefa.
                     </p>
                 </article>
-                <article class="paragraphContainer">
+                <article class="paragraphContainer sndArticle">
                     <h4 class="slide">DO KOGO DEDYKOWANE SĄ TE WARSZTATY?</h4>
                     <p class="appeartxt">
                         Do wszystkich osób, które pragną udoskonalić swoje umiejętności wokalne i chcą śpiewem sławić Boga.
@@ -80,7 +80,10 @@
                         Wszelkie pytania można kierować na adres mailowy:<br> <a href="mailto:warsztaty.kalisz@gmail.com">warsztaty.kalisz@gmail.com</a> <br>
                         Zapraszamy serdecznie!
                     </p>
-                    <div class="container">
+                    
+                </article>
+                <div class="container">
+                        <h1 class="Introducion">INFORMACJE O PROWADZĄCYCH:</h1>
                         <ul id="cards">
                             <li class="card" id="card1">
                                 <div class="card-body">
@@ -98,7 +101,7 @@ Studium Teologii Rodziny w Krakowie. Prowadzi autorskie warsztaty emisji głosu 
 śpiewu liturgicznego, przygotowanie emisyjne solistów, chórów i zespołów do koncertów
 oraz sesji nagraniowych), szkolenia dla osób, dla których głos jest podstawowym narzędziem
 pracy, jak również warsztaty wspierające rozwój osobisty kobiet i mężczyzn w oparciu o
-holistyczną koncepcję człowieka według Jana Pawła II. Pracuje również w Państwowej Szkole</p>
+holistyczną koncepcję człowieka według Jana Pawła II. Pracuje również w Państwowej Szkole.</p>
                                 </div>
                             </li>
                             <li class="card" id="card2">
@@ -113,7 +116,6 @@ holistyczną koncepcję człowieka według Jana Pawła II. Pracuje również w P
                             </li>
                         </ul>
                     </div>
-                </article>
             </main>
         </div>
     </div>
@@ -124,6 +126,8 @@ export default {
     mounted () {
         this.fadeInTxt ();
         this.slideHeaders ();
+
+        window.addEventListener('scroll', this.logScrollPosition);
     },
     methods: {
         fadeInTxt () {
@@ -145,6 +149,12 @@ export default {
                 }, delay);
                 delay += 200;
             });
+        },
+        logScrollPosition() {
+            console.log('Current scroll position:', window.scrollY);
+            if (window.scrollY >= 2400) {
+                const header = document.querySelector('Introducion');
+            }
         }
     }
 }
