@@ -1,6 +1,6 @@
 <template>
       <main>
-        <article class="DKElement">
+        <!-- <article class="DKElement">
             <span class="date">&nbsp; 2024-43-32  &nbsp;</span>
             <h1>JAKIŚ DŁUGI TYTUŁ</h1>
             <p>Zdjęcia</p>
@@ -33,7 +33,7 @@
   
   
           <p class="desc" v-html="Update.desc"></p>
-      </article>
+      </article> -->
 
       </main>
 </template>
@@ -41,8 +41,6 @@
   import AddDK from '@/components/AddDrogaKrzyzowa.vue';
 </script>
 <script>
-  import db from '@/firebase/init.js';
-  import { collection, Doc, getDocs, query, orderBy } from 'firebase/firestore';
   import 'vue3-carousel/dist/carousel.css';
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 

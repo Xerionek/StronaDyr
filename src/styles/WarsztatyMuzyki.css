@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
 html {
     scroll-snap-type: y proximity;
 }
@@ -7,11 +7,11 @@ html {
 
 .bg {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./img/WMLBG.png);
+    /* background-image: url(./img/WMLBG.png); */
     box-shadow: 0 0 15px black inset;
     background-repeat: repeat;
     background-size: 100% 60%;
@@ -19,24 +19,29 @@ html {
 
 .bgblur {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(5px);
+    background-color: aliceblue;
 }
 
 .WMLMain {
     width: 80%;
-    min-height: 330dvh;
+    min-height: 430dvh;
     font-family: "Schibsted Grotesk", sans-serif;
-    color: aliceblue;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: #222;
+    border-radius: 30px;
+    margin: 40px;
+    border: 1px solid #222;
+    background-color: #EEE;
+    box-shadow: 0 0 5px #222 inset;
 }
 
 
 .paragraphContainer {
-    height: 100dvh;
+    min-height: 30dvh;
     scroll-snap-align: start;
 }
 
@@ -62,11 +67,9 @@ html {
 @keyframes fadeIn {
     0% { 
         opacity: 0; 
-        margin-top: 0;
     }
     100% { 
         opacity: 1; 
-        margin: 30px;
     }
 }
 
@@ -85,18 +88,24 @@ article:last-of-type {
 }
 
 .sndArticle {
-    height: 120dvh;
-    box-sizing: border-box;padding: 30px;
+    min-height: 60dvh;
+    box-sizing: border-box;
+    padding: 10px;
 }
+
 
 article h4 {
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: center;
 }
+.slide {
+    opacity: 0;
+}
 
 .slided {
     animation: slide 2s;
+    opacity: 1;
 }
 
 @keyframes slide {
@@ -163,9 +172,9 @@ a:visited {
 .card-body {
 	box-sizing: border-box;
 	padding: 30px;
-	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3) inset;
+	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
     border-radius: 15px;
-	height: 87vh;
+    min-height: 87vh;
 	transition: all 0.5s;
     color: #000;
     text-shadow: none;
@@ -189,4 +198,62 @@ h2 {
 .personDesc {
     font-size: 1.5em;
     text-align: justify; 
+}
+
+.Introducion {
+    
+    font-size: 250%;
+}
+
+.headerTxt {
+    position: absolute;
+    z-index: 99;
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 99dvw;
+    top: 0;
+    font-family: "Rubik Mono One", monospace;
+    background-color: #222;
+    color: aliceblue;
+    /* animation: headerAnim 3s ease-in-out; */
+    /* clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%); */
+}
+
+@keyframes headerAnim {
+    0% {
+        clip-path: polygon(0% 0%, 0 0, 100% 0, 100% 100%);
+    }
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%);
+    }
+}
+
+.headerTxt h1 {
+    text-align: center;
+}
+
+.restofbg {
+    position: absolute;
+    top: 100dvh;
+    height: 100%;
+    width: 99dvw;
+    background-color: #222;
+    z-index: 99;
+}
+
+.gallery {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100dvh !important;
+}
+
+.ytvideo {
+    width: 64dvw;
+    height: 36dvw;
+    border-radius: 20px;
 }

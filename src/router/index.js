@@ -21,12 +21,7 @@ const routes = [
     path: '/warsztaty-muzyki-liturgicznej',
     name: 'warsztaty-muzyki-liturgicznej',
     component: () => import('../views/WarsztatyMuzykiLiturgicznejView.vue')
-  },
-  {
-    path: '/admin',
-    name: 'admin',
-    component: () => import('../views/AdminView.vue')
-  },
+  }
 ]
 
 const router = createRouter({

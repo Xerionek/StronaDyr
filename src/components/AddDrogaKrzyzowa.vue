@@ -22,9 +22,6 @@
 </template>
   
 <script>
-    import db from '@/firebase/init.js';
-    import {collection, addDoc, getDocs, query, doc, setDoc } from 'firebase/firestore';
-    import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
     import { QuillEditor } from '@vueup/vue-quill'
     import '@vueup/vue-quill/dist/vue-quill.snow.css';
     import router from '@/router/index.js';

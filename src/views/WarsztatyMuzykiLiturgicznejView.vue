@@ -1,11 +1,16 @@
 <template>
+    
     <div class="bg">
         <div class="bgblur">
+            <div class="headerTxt" id="animateHeader">
+                    <h1>„Ty, co nie zwątpiłaś nigdy”</h1>
+            </div>
+            <div class="restofbg" style="display: block;"></div>
             <main class="WMLMain">
-                <h1>„Ty, co nie zwątpiłaś nigdy”</h1>
                 <article class="paragraphContainer">
+                    <h1>„Ty, co nie zwątpiłaś nigdy”</h1>
+
                     <p class="appeartxt">
-                        
                         Pod takim tytułem w dniach <em class="underline"> 23 – 25 sierpnia 2024 roku,</em> już po raz trzeci, odbędą się<br>
                         w Technikum im. Św. Józefa Warsztaty Muzyki Liturgicznej, które poprowadzą: Katarzyna<br>
                         Młynarska, Urszula Rogala oraz Jakub Tomalak.
@@ -82,8 +87,9 @@
                     </p>
                     
                 </article>
-                <div class="container">
-                        <h1 class="Introducion">INFORMACJE O PROWADZĄCYCH:</h1>
+                <article>
+                    <div class="container">
+                        <h1 class="Introducion">INFORMACJE O PROWADZĄCYCH</h1>
                         <ul id="cards">
                             <li class="card" id="card1">
                                 <div class="card-body">
@@ -92,42 +98,111 @@
                                         <h2>Katarzyna Młynarska</h2>
                                     </div>
                                     
-                                    <p class="personDesc">wokalistka, trener emisji
-głosu, dyrygent, mówca motywacyjny, muzykolog. Pomysłodawczyni, dyrektor i wykładowca
-Wrocławskiego Liturgicznego Studium Wokalnego​. Absolwentka Instytutu Teorii i Historii
-Muzyki Uniwersytetu Jagiellońskiego, Wydziału Wokalno-Aktorskiego Akademii Muzycznej w
-Krakowie, Podyplomowych Studiów Chórmistrzostwa i Emisji Głosu w Bydgoszczy oraz
-Studium Teologii Rodziny w Krakowie. Prowadzi autorskie warsztaty emisji głosu (w tym
-śpiewu liturgicznego, przygotowanie emisyjne solistów, chórów i zespołów do koncertów
-oraz sesji nagraniowych), szkolenia dla osób, dla których głos jest podstawowym narzędziem
-pracy, jak również warsztaty wspierające rozwój osobisty kobiet i mężczyzn w oparciu o
-holistyczną koncepcję człowieka według Jana Pawła II. Pracuje również w Państwowej Szkole.</p>
+                                    <p class="personDesc">
+                                        wokalistka, trener emisji
+                                        głosu, dyrygent, mówca motywacyjny, muzykolog. Pomysłodawczyni, dyrektor i wykładowca
+                                        Wrocławskiego Liturgicznego Studium Wokalnego​. Absolwentka Instytutu Teorii i Historii
+                                        Muzyki Uniwersytetu Jagiellońskiego, Wydziału Wokalno-Aktorskiego Akademii Muzycznej w
+                                        Krakowie, Podyplomowych Studiów Chórmistrzostwa i Emisji Głosu w Bydgoszczy oraz
+                                        Studium Teologii Rodziny w Krakowie. Prowadzi autorskie warsztaty emisji głosu (w tym
+                                        śpiewu liturgicznego, przygotowanie emisyjne solistów, chórów i zespołów do koncertów
+                                        oraz sesji nagraniowych), szkolenia dla osób, dla których głos jest podstawowym narzędziem 
+                                        pracy, jak również warsztaty wspierające rozwój osobisty kobiet i mężczyzn w oparciu o
+                                        holistyczną koncepcję człowieka według Jana Pawła II. Pracuje również w Państwowej Szkole.
+                                    </p>
                                 </div>
                             </li>
                             <li class="card" id="card2">
                                 <div class="card-body">
-                                    <h2>Card 2</h2>
+                                    <div class="wrapper">
+                                        <img src="@/styles/img/UrszulaRogala.png" alt="">
+                                        <h2>Urszula Rogala</h2>
+                                    </div>
+                                    
+                                    <p class="personDesc">
+                                        kompozytorka, dyrygentka,
+                                        wokalistka. Komponuje muzykę liturgiczną, utwory solowe, kameralne, chóralne i
+                                        orkiestrowe. Ukończyła studia kompozycji na Uniwersytecie Muzycznym w Warszawie oraz
+                                        Podyplomowe Studia Chórmistrzostwa i Emisji Głosu w Bydgoszczy. Jej dzieła były
+                                        wielokrotnie wykonywane w kraju i za granicą, między innymi podczas kilku edycji
+                                        Uczniowskiego Forum Muzycznego, podczas cyklu koncertów symfonicznych w ramach
+                                        projektu Nova Hereditas, na wielu koncertach w Akademii Muzycznej im. F. Chopina, a także
+                                        podczas koncertu członków orkiestry Opéra Royal de Wallonie (Belgia). Uczy emisji głosu w
+                                        dominikańskim nowicjacie w Warszawie oraz u mniszek dominikańskich w Radoniach.
+                                    </p>
                                 </div>
                             </li>
                             <li class="card" id="card3">
                                 <div class="card-body">
-                                    <h2>Card 3</h2>
+                                    <div class="wrapper">
+                                        <img src="@/styles/img/JakubTomalak.png" alt="">
+                                        <h2>Jakub Tomalak</h2>
+                                    </div>
+                                    
+                                    <p class="personDesc">
+                                        wszechstronny muzyk: producent muzyczny, kompozytor, aranżer, instrumentalista, dyrygent oraz trener 
+                                        zespołów muzycznych. W latach 2006 – 2016 jego działalność obejmowała również rolę wykładowcy akademickiego. Jest absolwentem
+                                        Uniwersytetu im. Adama Mickiewicza w Poznaniu oraz Podyplomowego Studium Chórmistrzowskiego Akademii Muzycznej im. Feliksa 
+                                        Nowowiejskiego w Bydgoszczy. Jakub Tomalak jest także autorem wielu pieśni liturgicznych oraz uwielbienia. Niezwykle ważnym 
+                                        nurtem w jego działalności jest praca w charakterze instruktora warsztatów szkoleniowych dla chórów, zespołów wokalno - 
+                                        instrumentalnych na terenie całego kraju oraz poza jego granicami (Niemcy, Wielka Brytania). Dwukrotnie został nagrodzony 
+                                        przez Prezydenta Miasta Kalisza za swoje osiągnięcia w dziedzinie twórczości artystycznej, upowszechnianie kultury oraz 
+                                        ochrony dziedzictwa narodowego.
+                                    </p>
                                 </div>
                             </li>
                         </ul>
                     </div>
+                </article>
+                <article class="gallery">
+                    <h1>Poprzednie Edycje</h1>
+                    <iframe class="ytvideo" src="https://www.youtube.com/embed/3vqdk2OqoSM?si=9QlQEzCbZjf2IOJq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+
+                    <carousel :wrapAround="true" :autoplay="3000" :pauseAutoplayOnHover="true">
+                    <slide class="carousel-cell" v-for="(photo, index) in images" :key="index">
+                        <img :src="photo" class="carousel-photo"/>
+                    </slide>
+                    <template #addons>
+                        <navigation />
+                        <pagination />
+                    </template>
+                    </carousel>
+
+                </article>
             </main>
         </div>
     </div>
     
 </template>
-<script>
-export default {
-    mounted () {
-        this.fadeInTxt ();
-        this.slideHeaders ();
+<script setup>
+import { ref, onMounted } from 'vue';
+</script>
 
+
+<script>
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+
+
+export default {
+    components: {
+      Carousel,
+      Slide,
+      Pagination,
+      Navigation,
+    },
+    data () {
+        images: []
+    },
+    mounted () {
+        document.body.style.overflow = "hidden";
+        document.querySelector("main").style.paddingRight = "17px";
         window.addEventListener('scroll', this.logScrollPosition);
+        setTimeout(() => {this.animateWelcomeHEader()}, 1000);
+        // this.animateWelcomeHEader();
+        this.getImgs();
+        
     },
     methods: {
         fadeInTxt () {
@@ -151,10 +226,43 @@ export default {
             });
         },
         logScrollPosition() {
-            console.log('Current scroll position:', window.scrollY);
             if (window.scrollY >= 2400) {
                 const header = document.querySelector('Introducion');
             }
+        },
+        animateWelcomeHEader() {
+            const header = document.querySelector("#animateHeader");
+            let bol = true
+            let val1 = 0 ,val2 = 100;
+            let interval = setInterval(() => {
+
+                if (val2 < 0) {
+                    clearInterval(interval);
+                    console.log("interval clear");
+                    const headerBg = document.querySelector(".restofbg").style = "display: none;";
+                    document.body.style.overflow = "auto";
+                    document.body.style.paddingRight = "";
+                    return;
+                }
+                if (val1 == 100 && bol) {
+                    this.fadeInTxt ();
+                    this.slideHeaders ();
+                    bol = !bol;
+                }
+
+                if(val1 <= 100){
+                    header.style = `clip-path: polygon(${val1}% 100%, 100% 100%, 100% 0%, 0% 0%, 0% ${100 - val1}%);`;
+                    val1++;
+                } else{
+                    header.style = `clip-path: polygon(100% ${val2}%, 100% 0%, ${100 - val2}% 0%);`;
+                    val2--;
+                }
+
+            }, 1);
+        },
+        getImgs() {
+            for
+            this.images.push()
         }
     }
 }
