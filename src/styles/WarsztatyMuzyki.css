@@ -4,7 +4,6 @@ html {
     scroll-snap-type: y proximity;
 }
 
-
 .bg {
     width: 100%;
     min-height: 100%;
@@ -213,7 +212,7 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 100dvh;
-    width: 99dvw;
+    width: 100dvw;
     top: 0;
     font-family: "Rubik Mono One", monospace;
     background-color: #222;
@@ -256,4 +255,55 @@ h2 {
     width: 64dvw;
     height: 36dvw;
     border-radius: 20px;
+}
+
+.carousel {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    #cards {
+        list-style: none;
+        padding-left: 0;
+        display: flex !important;
+        flex-direction: column;
+        gap: 4vw;
+        margin-bottom: 4vw;
+    }
+    
+    .card {
+        position: relative;
+        padding-top: 30px !important;
+    }
+    
+    .card .card-body {
+        background-color: aliceblue;
+    }
+
+    .card-body {
+        box-sizing: border-box;
+        padding: 30px;
+        box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+        border-radius: 15px;
+        min-height: 87vh;
+        color: #000;
+        text-shadow: none;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 4em;
+        margin-top: 25dvh;
+        margin-bottom: 15px;
+        text-align: center !important;
+    }
+}
+
+.gallery {
+    min-height: 100dvh;
+}
+
+.carousel-photo {
+    width: 50dvw;
+    height: 30dvw;
 }

@@ -159,9 +159,9 @@
                     <iframe class="ytvideo" src="https://www.youtube.com/embed/3vqdk2OqoSM?si=9QlQEzCbZjf2IOJq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     
 
-                    <carousel :wrapAround="true" :autoplay="3000" :pauseAutoplayOnHover="true">
-                    <slide class="carousel-cell" v-for="(photo, index) in images" :key="index">
-                        <img :src="photo" class="carousel-photo"/>
+                    <carousel :wrapAround="true" :autoplay="3000" :pauseAutoplayOnHover="true" class="carousel">
+                    <slide class="carousel-cell" v-for="num in 20">
+                        <img :src="require('@/assets/Gallery/muzyka-liturgiczna'+ num + '.webp')" class="carousel-photo"/>
                     </slide>
                     <template #addons>
                         <navigation />
@@ -183,7 +183,7 @@ import { ref, onMounted } from 'vue';
 <script>
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-
+import { defineComponent } from 'vue'
 
 export default {
     components: {
@@ -202,7 +202,6 @@ export default {
         setTimeout(() => {this.animateWelcomeHEader()}, 1000);
         // this.animateWelcomeHEader();
         this.getImgs();
-        
     },
     methods: {
         fadeInTxt () {
@@ -238,7 +237,6 @@ export default {
 
                 if (val2 < 0) {
                     clearInterval(interval);
-                    console.log("interval clear");
                     const headerBg = document.querySelector(".restofbg").style = "display: none;";
                     document.body.style.overflow = "auto";
                     document.body.style.paddingRight = "";
@@ -260,9 +258,26 @@ export default {
 
             }, 1);
         },
+        
         getImgs() {
-            for
-            this.images.push()
+            // const photos = require.context('../styles/img/Gallery', false, /.webP$/);
+
+            // // console.log(photos);
+
+            // // this.images = photos.keys().map(key => "../styles/img/Gallery/" + key.slice(2))
+            // photos.keys().forEach(key => (console.log(photos(key))));
+
+            this.images = new Array();
+
+            for(let i = 1; i <= 20; i++) {
+                this.images.push(require(`@/assets/Gallery/muzyka-liturgiczna${i}.webp`));
+            }
+
+
+
+
+ 
+            // this.images.push()
         }
     }
 }
