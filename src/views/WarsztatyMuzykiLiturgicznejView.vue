@@ -1,11 +1,7 @@
 <template>
-    
-    <div class="bg" id="bg">
-        <div class="bgblur">
-            <div class="headerTxt" id="animateHeader">
+                <div class="headerTxt" id="animateHeader">
                     <h1>„Ty, co nie zwątpiłaś nigdy”</h1>
             </div>
-            <div class="restofbg" style="display: block;"></div>
             <main class="WMLMain">
                 <article class="paragraphContainer">
                     <h1>„Ty, co nie zwątpiłaś nigdy”</h1>
@@ -89,6 +85,7 @@
                     </p>
                     
                 </article>
+
                 <article>
                     <div class="container">
                         <h1 class="Introducion">INFORMACJE O PROWADZĄCYCH</h1>
@@ -156,6 +153,7 @@
                         </ul>
                     </div>
                 </article>
+
                 <article class="gallery">
                     <h1>Poprzednie Edycje</h1>
                     <iframe class="ytvideo" src="https://www.youtube.com/embed/3vqdk2OqoSM?si=9QlQEzCbZjf2IOJq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -170,30 +168,26 @@
                         <pagination />
                     </template>
                     </carousel>
-                    <h4>
-                        Więcej na
-                    </h4>
-                    <h5>
-                        Rok 2023
-                    </h5>
-                    <a href="https://www.radiorodzina.kalisz.pl/z-nami-chwale-niebo-cale-warsztaty-muzyki-liturgicznej/">Radio Rodzina</a>
+                    <br>
+                    <h3>Więcej na</h3>
+
+                    <h5>Rok 2023</h5>
+                    <a href="https://www.radiorodzina.kalisz.pl/z-nami-chwale-niebo-cale-warsztaty-muzyki-liturgicznej/">Radio Rodzina</a><br>
                     <a href="https://latarnikkaliski.pl/zakonczyla-sie-2-edycja-warsztatow-muzyki-liturgicznej/">Latarnik Kaliski</a>
-                    <h5>
-                        Rok 2022
-                    </h5>
+
+                    <h5>Rok 2022</h5>
                     <a href="https://www.radiorodzina.kalisz.pl/warsztaty-muzyki-liturgicznej-wybrani-przez-boga/">Radio Rodzina</a>
+
                     
                 </article>
             </main>
             <footer>
-                <h2>Patronat honowowy</h2>
+                <!-- <h2>Patronat honowowy</h2>
                 <img src="honorablesponsor.webp" alt="">
                 <h3>Patronat medialny</h3>
-                <img src="footersponsors.webp" alt="">
-            </footer>
-        </div>
-    </div>
-    
+                <img src="footersponsors.webp" alt=""> -->
+                <img src="patroni.png" alt="">
+            </footer>    
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
@@ -220,7 +214,7 @@ export default {
     },
     mounted () {
         document.querySelector("main").style.paddingRight = "17px";
-        setTimeout(() => {this.animateWelcomeHEader()}, 1000);
+        setTimeout(() => {this.animateWelcomeHEader()}, 1500);
         // this.animateWelcomeHEader();
         this.getImgs();
     },
@@ -243,7 +237,7 @@ export default {
 
                 if (val2 < 0) {
                     clearInterval(interval);
-                    const headerBg = document.querySelector(".restofbg").style = "display: none;";
+                    // const headerBg = document.querySelector(".restofbg").style = "display: none;";
                     document.body.style.overflow = "auto";
                     document.body.style.paddingRight = "";
                     return;

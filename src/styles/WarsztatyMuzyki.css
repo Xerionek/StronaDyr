@@ -19,9 +19,9 @@ html {
 .bgblur {
     width: 100%;
     min-height: 100%;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     backdrop-filter: blur(5px);
     background-color: aliceblue;
     overflow: hidden;
@@ -30,7 +30,7 @@ html {
 
 .WMLMain {
     width: 80%;
-    min-height: 450dvh;
+    /* min-height: 450dvh; */
     font-family: "Schibsted Grotesk", sans-serif;
     color: #222;
     border-radius: 30px;
@@ -38,11 +38,11 @@ html {
     border: 1px solid #222;
     background-color: #EEE;
     box-shadow: 0 0 5px #222 inset;
+    margin: 2% auto;
 }
 
 
 .paragraphContainer {
-    min-height: 30dvh;
     scroll-snap-align: start;
 }
 
@@ -65,13 +65,9 @@ html {
 
 article {
     scroll-snap-align: start;
+    margin: 10px;
 }
 
-article:last-of-type {
-    box-sizing: border-box;
-    height: 20dvh;
-    padding: 15px;
-}
 
 .sndArticle {
     min-height: 60dvh;
@@ -151,7 +147,6 @@ a:visited {
 }
 
 .card .card-body {
-    background-color: aliceblue;
 }
 
 
@@ -165,6 +160,7 @@ a:visited {
     color: #000;
     text-shadow: none;
     padding: 30px;
+    background-color: aliceblue;
 }
 
 h2 {
@@ -191,7 +187,7 @@ h2 {
 }
 
 .headerTxt {
-    position: absolute;
+    position: fixed;
     z-index: 99;
     font-size: 200%;
     display: flex;
@@ -200,20 +196,10 @@ h2 {
     height: 100dvh;
     width: 100dvw;
     top: 0;
+    left: 0;
     font-family: "Rubik Mono One", monospace;
     background-color: #222;
     color: aliceblue;
-    /* animation: headerAnim 3s ease-in-out; */
-    /* clip-path: polygon(0 100%, 0 0, 100% 0, 0 100%); */
-}
-
-@keyframes headerAnim {
-    0% {
-        clip-path: polygon(0% 0%, 0 0, 100% 0, 100% 100%);
-    }
-    100% {
-        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%);
-    }
 }
 
 .headerTxt h1 {
@@ -234,7 +220,6 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 165dvh !important;
 }
 
 .ytvideo {
@@ -316,6 +301,10 @@ footer {
 footer * {
     font-size: 160%;
     margin: 0;
+}
+
+footer img{
+    max-width: 100%;
 }
 
 footer img:first-of-type {
