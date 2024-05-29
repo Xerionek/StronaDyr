@@ -1,6 +1,6 @@
 <template>
     
-    <div class="bg">
+    <div class="bg" id="bg">
         <div class="bgblur">
             <div class="headerTxt" id="animateHeader">
                     <h1>„Ty, co nie zwątpiłaś nigdy”</h1>
@@ -46,7 +46,8 @@
                 <article class="paragraphContainer sndArticle">
                     <h4 class="slide">DO KOGO DEDYKOWANE SĄ TE WARSZTATY?</h4>
                     <p class="appeartxt">
-                        Do wszystkich osób, które pragną udoskonalić swoje umiejętności wokalne i chcą śpiewem sławić Boga.
+                        Do wszystkich osób, które pragną udoskonalić swoje umiejętności wokalne i chcą śpiewem sławić Boga. <br>
+                        <a href="plakat warsztaty muzyczne.jpg" target="_blank">Plakat promocyjny</a>
                     </p>
                     <h4 class="slide">KOSZT UCZESTNICTWA</h4>
                     <p class="appeartxt">
@@ -79,6 +80,7 @@
                         najpóźniej na tydzień przed warsztatami, będzie możliwość zwrotu kosztów noclegów oraz<br>
                         posiłków – opłata wpisowa jest bezzwrotna.
                     </p>
+                    <a href="Regulamin warsztatów 23_25.08.2024.pdf" target="_blank" class="openRegulamin">regulamin spotkania</a> 
                 </article>
                 <article class="paragraphContainer">
                     <p class="appeartxt">
@@ -168,9 +170,27 @@
                         <pagination />
                     </template>
                     </carousel>
-
+                    <h4>
+                        Więcej na
+                    </h4>
+                    <h5>
+                        Rok 2023
+                    </h5>
+                    <a href="https://www.radiorodzina.kalisz.pl/z-nami-chwale-niebo-cale-warsztaty-muzyki-liturgicznej/">Radio Rodzina</a>
+                    <a href="https://latarnikkaliski.pl/zakonczyla-sie-2-edycja-warsztatow-muzyki-liturgicznej/">Latarnik Kaliski</a>
+                    <h5>
+                        Rok 2022
+                    </h5>
+                    <a href="https://www.radiorodzina.kalisz.pl/warsztaty-muzyki-liturgicznej-wybrani-przez-boga/">Radio Rodzina</a>
+                    
                 </article>
             </main>
+            <footer>
+                <h2>Patronat honowowy</h2>
+                <img src="honorablesponsor.webp" alt="">
+                <h3>Patronat medialny</h3>
+                <img src="footersponsors.webp" alt="">
+            </footer>
         </div>
     </div>
     
@@ -193,27 +213,18 @@ export default {
       Navigation,
     },
     data () {
-        images: []
+        return {
+            images: [],
+            scrollable: false
+        }
     },
     mounted () {
-        document.body.style.overflow = "hidden";
         document.querySelector("main").style.paddingRight = "17px";
-        window.addEventListener('scroll', this.logScrollPosition);
         setTimeout(() => {this.animateWelcomeHEader()}, 1000);
         // this.animateWelcomeHEader();
         this.getImgs();
     },
     methods: {
-        fadeInTxt () {
-            const paragraphs = document.querySelectorAll('.appeartxt');
-            let delay = 0;
-            paragraphs.forEach((paragraph, index) => {
-                setTimeout(() => {
-                    paragraph.classList.add('fadeInClass');
-                }, delay);
-                delay += 200;
-            });
-        },
         slideHeaders () {
             const headers = document.querySelectorAll('.slide');
             let delay = 0;
@@ -223,11 +234,6 @@ export default {
                 }, delay);
                 delay += 200;
             });
-        },
-        logScrollPosition() {
-            if (window.scrollY >= 2400) {
-                const header = document.querySelector('Introducion');
-            }
         },
         animateWelcomeHEader() {
             const header = document.querySelector("#animateHeader");
@@ -243,7 +249,6 @@ export default {
                     return;
                 }
                 if (val1 == 100 && bol) {
-                    this.fadeInTxt ();
                     this.slideHeaders ();
                     bol = !bol;
                 }
@@ -257,6 +262,7 @@ export default {
                 }
 
             }, 1);
+            this.scrollable = true;
         },
         
         getImgs() {
@@ -272,11 +278,6 @@ export default {
             for(let i = 1; i <= 20; i++) {
                 this.images.push(require(`@/assets/Gallery/muzyka-liturgiczna${i}.webp`));
             }
-
-
-
-
- 
             // this.images.push()
         }
     }

@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "dst-kalisz",
+    "dist": "dst-malisz",
+    "dst-kalisz": "dst-kalisz"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
