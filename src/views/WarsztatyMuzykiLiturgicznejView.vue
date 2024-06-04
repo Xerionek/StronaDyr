@@ -88,7 +88,7 @@
 
                 <article>
                     <div class="container">
-                        <h1 class="Introducion">INFORMACJE O PROWADZĄCYCH</h1>
+                        <h1 class="text-max">INFORMACJE O PROWADZĄCYCH</h1>
                         <ul id="cards">
                             <li class="card" id="card1">
                                 <div class="card-body">

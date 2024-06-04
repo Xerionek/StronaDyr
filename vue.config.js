@@ -17,3 +17,11 @@ module.exports = defineConfig({
     // })
 },
 })
+
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = {
+  configureWebpack: {
+    plugins: [new MiniCssExtractPlugin()],
+  }
+};
