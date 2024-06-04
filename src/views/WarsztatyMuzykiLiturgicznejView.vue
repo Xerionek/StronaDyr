@@ -186,7 +186,7 @@
                 <img src="honorablesponsor.webp" alt="">
                 <h3>Patronat medialny</h3>
                 <img src="footersponsors.webp" alt=""> -->
-                <img src="patroni.png" alt="">
+                <img id="patroni"src="patroni.png" alt="">
             </footer>    
 </template>
 <script setup>

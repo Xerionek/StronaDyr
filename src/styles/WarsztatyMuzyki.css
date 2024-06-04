@@ -146,9 +146,6 @@ a:visited {
 	padding-top: calc(var(--index) * 1.5em);
 }
 
-.card .card-body {
-}
-
 
 .card-body {
 	box-sizing: border-box;
@@ -303,12 +300,9 @@ footer * {
     margin: 0;
 }
 
-footer img{
-    max-width: 100%;
-}
-
-footer img:first-of-type {
-    height: 300px;
+footer #patroni{
+    max-height: 300px;
+    max-width:100%;
 }
 
 .noscroll {
