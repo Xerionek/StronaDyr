@@ -8,9 +8,6 @@
     <router-link to="/warsztaty-muzyki-liturgicznej" class="NavHref" style="margin-right: 35%">Warsztaty Muzyki Liturgicznej</router-link>
     
   </nav>
-  <nav v-if="this.$route.name == 'admin'" class="MainNav">
-    <router-link to="/" class="NavHref">Wyloguj się</router-link>
-  </nav>
   <router-view class="MainRouterView"/>
 </template>
 

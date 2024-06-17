@@ -231,6 +231,7 @@ h2 {
 
 .gallery {
     min-height: 120dvh;
+    font-size: 120%;
 }
 
 .carousel-photo {

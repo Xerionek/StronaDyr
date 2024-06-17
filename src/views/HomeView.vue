@@ -1,7 +1,7 @@
 <template>
   <video class="bg" src="@/assets/background-movie.mp4" autoplay muted loop></video>    
   <main id="MainHome">
-    <img src="@/assets/WelcomeTxt.webp" alt="Powitanie">
+    <img src="Welcometxt.webp" alt="Powitanie">
     <div class="wrapper">
       <!-- <router-link to="/droga-krzyzowa-srodowisk-tworczych" class="btnHomeHref">{{ firstBtnTxt }}</router-link> -->
       <!-- <router-link to="/zaduszki-jazzowe-srodowisk-tworczych" class="btnHomeHref">{{ secondBtnTxt }}</router-link> -->
