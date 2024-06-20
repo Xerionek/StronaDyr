@@ -155,7 +155,7 @@
                 </article>
 
                 <article class="gallery">
-                    <article>
+                    <!-- <article>
                         <h3>W ramach kwartalnego spotkania Kaliskich Środowisk Twórczych 7 czerwca <br> w Technikum im. św. Józefa odbyło się spotkanie autorskie z pisarzem Wacławem Holewińskim.</h3> <br>
                         <p>Wacław Holewiński był działaczem opozycyjnym i współpracownikiem KOR-u w latach1977 - 1981,<br> internowanym w stanie wojennym a później aresztowanym.  W swej twórczości pisarz znany jest z odkrywania postaci ważnych dla historii, <br> choć nie powszechnie znanym Polakom.  Na podstawie jego wielokrotnie nagrodzonej powieści:"Pogrom 1905" , <br> powstał cieszący się dużą popularnością serial: "Polowanie na ćmy".</p>
                         <carousel :wrapAround="true" :autoplay="3000" :pauseAutoplayOnHover="true" class="carousel">
@@ -169,7 +169,7 @@
                         </carousel>
                         <br><br>
                         <hr>
-                    </article>
+                    </article> -->
                     <h1>Poprzednie Edycje</h1>
                     <iframe class="ytvideo" src="https://www.youtube.com/embed/3vqdk2OqoSM?si=9QlQEzCbZjf2IOJq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     
