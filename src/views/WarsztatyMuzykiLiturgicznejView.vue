@@ -39,51 +39,23 @@
                         Bazylice św. Józefa.
                     </p>
                 </article>
-                <article class="paragraphContainer sndArticle">
+                <article>
                     <h4 class="slide">DO KOGO DEDYKOWANE SĄ TE WARSZTATY?</h4>
                     <p class="appeartxt">
                         Do wszystkich osób, które pragną udoskonalić swoje umiejętności wokalne i chcą śpiewem sławić Boga. <br>
-                        <a href="plakat warsztaty muzyczne.jpg" target="_blank">Plakat promocyjny</a>
+
+                            <a href="plakat warsztaty muzyczne.jpg" target="_blank">Plakat promocyjny</a>
+                            <a href="Regulamin warsztatów 23_25.08.2024.pdf" target="_blank" class="openRegulamin">regulamin spotkania</a> 
                     </p>
-                    <h4 class="slide">KOSZT UCZESTNICTWA</h4>
-                    <p class="appeartxt">
-                        120 PLN
-                        Osoby chętne do wzięcia udziału w warsztatach proszone są o  <br> <a href="https://forms.gle/DVKSobPtoUZNjiNV9" target="_blank">wypełnienie formularza</a> <br><br>
-                        Zapisy będą przyjmowane <em class="underline">jedynie do 16 sierpnia.</em>
-                    </p>
-                    <p class="appeartxt">
-                        Ze względów organizacyjnych, po wypełnieniu formularza prosimy o wpłatę całości<br>
-                        kwoty na konto:<br>
-                        Technikum im. św. Józefa<br>
-                        nr konta: 16 8404 0006 2104 0000 1333 0006<br>
-                        Z dopiskiem „Imię i nazwisko uczestnika / uczestników_WML24”.<br>
-                    </p>
-                    <p class="appeartxt">
-                        Dla osób spoza Kalisza możliwy jest nocleg w Internacie Technikum im. św. Józefa.<br>
-                        Koszt wynosi 60 zł / nocleg. Osoby chętne proszone są o zaznaczenie tej opcji w formularzu<br>
-                        zgłoszenia. Płatność za noclegi prosimy regulować wraz z opłatą warsztatową.<br>
-                    </p>
-                    <p class="appeartxt">
-                        Dla wszystkich uczestników będą dostępne woda oraz ciepłe napoje. Istnieje również<br>
-                        możliwość zamówienia posiłków – osoby, które chciałyby skorzystać z cateringu proszone są<br>
-                        o zaznaczenie w formularzu zgłoszeniowym pełnego wyżywienia bądź wybranych posiłków.<br>
-                        Koszty znajdują się w formularzu zgłoszeniowym. Opłaty za posiłki również prosimy<br>
-                        regulować przed warsztatami.  
-                    </p>
-                    <p class="appeartxt">
-                        Liczba miejsc jest ograniczona, dlatego prosimy o, w miarę możliwości, szybką decyzję<br>
-                        dotyczącą uczestnictwa. W przypadku braku możliwości przybycia prosimy o informację<br>
-                        najpóźniej na tydzień przed warsztatami, będzie możliwość zwrotu kosztów noclegów oraz<br>
-                        posiłków – opłata wpisowa jest bezzwrotna.
-                    </p>
-                    <a href="Regulamin warsztatów 23_25.08.2024.pdf" target="_blank" class="openRegulamin">regulamin spotkania</a> 
+                    <h1 style="text-decoration: underline;">
+                        Zapisy zostały zakończone, a osoby chcące zgłosić chęć udziału w warsztatach proszone są o kontakt mailowy.
+                    </h1>
                 </article>
                 <article class="paragraphContainer">
                     <p class="appeartxt">
                         Wszelkie pytania można kierować na adres mailowy:<br> <a href="mailto:warsztaty.kalisz@gmail.com">warsztaty.kalisz@gmail.com</a> <br>
                         Zapraszamy serdecznie!
                     </p>
-                    
                 </article>
 
                 <article>
@@ -224,7 +196,8 @@ export default {
     data () {
         return {
             images: [],
-            scrollable: false
+            scrollable: false,
+            recrutationOpen: false,
         }
     },
     mounted () {
@@ -232,6 +205,7 @@ export default {
         setTimeout(() => {this.animateWelcomeHEader()}, 1500);
         // this.animateWelcomeHEader();
         this.getImgs();
+        this.checkDate();
     },
     methods: {
         slideHeaders () {
@@ -288,6 +262,15 @@ export default {
                 this.images.push(require(`@/assets/Gallery/muzyka-liturgiczna${i}.webp`));
             }
             // this.images.push()
+        },
+        checkDate () {
+            const currdate = new Date();
+            const recrutationLimitDate = new Date("2024-08-17");
+            if (currdate > recrutationLimitDate) {
+                this.recrutationOpen = false;
+            } else {
+                this.recrutationOpen = true;
+            }
         }
     }
 }
